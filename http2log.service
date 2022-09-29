@@ -1,0 +1,12 @@
+[Unit]
+Description=HTTP to Log Service
+After=network.target
+
+[Service]
+Type=simple
+Restart=on-failure
+RestartSec=5s
+ExecStart=/usr/local/bin/http2log
+
+[Install]
+WantedBy=multi-user.target
